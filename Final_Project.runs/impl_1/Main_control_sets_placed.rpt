@@ -1,0 +1,106 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Sat Dec 10 06:02:24 2022
+| Host         : CSE-P07-2165-09 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Main_control_sets_placed.rpt
+| Design       : Main
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    28 |
+|    Minimum number of control sets                        |    28 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    99 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    28 |
+| >= 0 to < 4        |    13 |
+| >= 4 to < 6        |     5 |
+| >= 6 to < 8        |     3 |
+| >= 8 to < 10       |     6 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     1 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              29 |            9 |
+| No           | No                    | Yes                    |             351 |          149 |
+| No           | Yes                   | No                     |              29 |           12 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              12 |            5 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------+------------------------+-------------------------+------------------+----------------+--------------+
+|       Clock Signal       |      Enable Signal     |     Set/Reset Signal    | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------------+------------------------+-------------------------+------------------+----------------+--------------+
+|  alarm/s5/count_reg[2]_0 |                        | alarm/s5/reset0         |                2 |              2 |         1.00 |
+|  dc/s5/clkstate_reg      |                        | dc/s5/reset0            |                1 |              2 |         2.00 |
+|  ck/CLK                  |                        | rst_IBUF                |                2 |              2 |         1.00 |
+|  alarm/ck/clk_out_reg_0  |                        | rst_IBUF                |                1 |              3 |         3.00 |
+|  alarm/ck/clk_out_reg_0  |                        | alarm/s5/count_reg[2]_0 |                1 |              3 |         3.00 |
+|  alarm/ck/clk_out_reg_0  |                        | alarm/s5/reset0         |                2 |              3 |         1.50 |
+|  dc/c/clk_out_reg_0      |                        | dc/s5/clkstate_reg      |                2 |              3 |         1.50 |
+|  dc/c/clk_out_reg_0      |                        | dc/s5/reset0            |                2 |              3 |         1.50 |
+|  BTNCC/sq/nxtstate       |                        |                         |                1 |              3 |         3.00 |
+|  BTND/sq/nxtstate        |                        |                         |                1 |              3 |         3.00 |
+|  BTNL/sq/nxtstate        |                        |                         |                1 |              3 |         3.00 |
+|  BTNR/sq/nxtstate        |                        |                         |                1 |              3 |         3.00 |
+|  BTNU/sq/nxtstate        |                        |                         |                1 |              3 |         3.00 |
+|  alarm/ck/clk_out_reg_0  |                        | alarm/s5/count_reg[2]_2 |                1 |              4 |         4.00 |
+|  alarm/ck/clk_out_reg_0  | alarm/s2/enmin0        | rst_IBUF                |                2 |              4 |         2.00 |
+|  dc/c/clk_out_reg_0      |                        | dc/s5/clkstate_reg_1    |                4 |              4 |         1.00 |
+|  dc/c/clk_out_reg_0      | dc/s0/count[2]_i_1_n_0 | dc/s5/reset011_out      |                1 |              4 |         4.00 |
+|  dc/c/clk_out_reg_0      | dc/s1/E[0]             | dc/s5/reset011_out      |                2 |              4 |         2.00 |
+|  dc/c/clk_out_reg_0      |                        | dc/s5/reset011_out      |                4 |              6 |         1.50 |
+|  dc/s4/E[0]              |                        |                         |                2 |              7 |         3.50 |
+|  BTNCC/sq/E[0]           |                        |                         |                2 |              7 |         3.50 |
+|  BTNCC/cd/nclk           |                        | rst_IBUF                |                3 |              8 |         2.67 |
+|  BTNU/cd/nclk            |                        | rst_IBUF                |                3 |              8 |         2.67 |
+|  coco/CLK                |                        | rst_IBUF                |                3 |              8 |         2.67 |
+|  BTND/cd/nclk            |                        | rst_IBUF                |                3 |              8 |         2.67 |
+|  BTNL/cd/nclk            |                        | rst_IBUF                |                3 |              8 |         2.67 |
+|  BTNR/cd/nclk            |                        | rst_IBUF                |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG           |                        | rst_IBUF                |              120 |            297 |         2.47 |
++--------------------------+------------------------+-------------------------+------------------+----------------+--------------+
+
+

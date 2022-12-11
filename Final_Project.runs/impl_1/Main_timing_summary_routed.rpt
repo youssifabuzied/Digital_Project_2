@@ -1,0 +1,711 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Sat Dec 10 06:02:46 2022
+| Host         : CSE-P07-2165-09 running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -report_unconstrained -file Main_timing_summary_routed.rpt -pb Main_timing_summary_routed.pb -rpx Main_timing_summary_routed.rpx -warn_on_violation
+| Design       : Main
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity          Description                     Violations  
+---------  ----------------  ------------------------------  ----------  
+TIMING-17  Critical Warning  Non-clocked sequential cell     388         
+LUTAR-1    Warning           LUT drives async reset alert    7           
+TIMING-20  Warning           Non-clocked latch               33          
+LATCH-1    Advisory          Existing latches in the design  1           
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (708)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (821)
+5. checking no_input_delay (6)
+6. checking no_output_delay (16)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (708)
+--------------------------
+ There are 297 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: rst (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: BTNCC/cd/clk_out_reg/Q (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: BTNCC/sq/FSM_onehot_state_reg[0]/Q (HIGH)
+
+ There are 10 register/latch pins with no clock driven by root clock pin: BTNCC/sq/FSM_onehot_state_reg[1]/Q (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: BTNCC/sq/FSM_onehot_state_reg[2]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: BTND/cd/clk_out_reg/Q (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: BTND/sq/FSM_onehot_state_reg[0]/Q (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: BTND/sq/FSM_onehot_state_reg[1]/Q (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: BTND/sq/FSM_onehot_state_reg[2]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: BTNL/cd/clk_out_reg/Q (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: BTNL/sq/FSM_onehot_state_reg[0]/Q (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: BTNL/sq/FSM_onehot_state_reg[1]/Q (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: BTNL/sq/FSM_onehot_state_reg[2]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: BTNR/cd/clk_out_reg/Q (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: BTNR/sq/FSM_onehot_state_reg[0]/Q (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: BTNR/sq/FSM_onehot_state_reg[1]/Q (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: BTNR/sq/FSM_onehot_state_reg[2]/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: BTNU/cd/clk_out_reg/Q (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: BTNU/sq/FSM_onehot_state_reg[0]/Q (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: BTNU/sq/FSM_onehot_state_reg[1]/Q (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: BTNU/sq/FSM_onehot_state_reg[2]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: FSM_onehot_statelr_reg[1]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: FSM_onehot_statelr_reg[3]/Q (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: FSM_onehot_stateud_reg[2]/Q (HIGH)
+
+ There are 17 register/latch pins with no clock driven by root clock pin: alarm/ck/clk_out_reg/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: alarm/s2/count_reg[1]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: alarm/s2/count_reg[2]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: alarm/s2/count_reg[3]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: alarm/s3/count_reg[1]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: alarm/s3/count_reg[2]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: alarm/s4/count_reg[1]_C/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: alarm/s4/count_reg[1]_LDC/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: alarm/s4/count_reg[1]_P/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: alarm/s4/count_reg[2]/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: alarm/s4/count_reg[3]/Q (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: alarm/s5/count_reg[0]/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: alarm/s5/count_reg[1]_C/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: alarm/s5/count_reg[1]_LDC/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: alarm/s5/count_reg[1]_P/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: alarm/s5/count_reg[2]/Q (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: ck/clk_out_reg/Q (HIGH)
+
+ There are 16 register/latch pins with no clock driven by root clock pin: clkstate_reg/Q (HIGH)
+
+ There are 8 register/latch pins with no clock driven by root clock pin: coco/clk_out_reg/Q (HIGH)
+
+ There are 24 register/latch pins with no clock driven by root clock pin: dc/c/clk_out_reg/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: dc/s2/count_reg[1]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: dc/s2/count_reg[2]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: dc/s2/count_reg[3]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: dc/s3/count_reg[1]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: dc/s3/count_reg[2]/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: dc/s4/count_reg[1]_C/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: dc/s4/count_reg[1]_LDC/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: dc/s4/count_reg[1]_P/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: dc/s4/count_reg[2]/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: dc/s4/count_reg[3]/Q (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: dc/s5/count_reg[0]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: dc/s5/count_reg[1]_C/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: dc/s5/count_reg[1]_LDC/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: dc/s5/count_reg[1]_P/Q (HIGH)
+
+ There are 9 register/latch pins with no clock driven by root clock pin: dc/s5/count_reg[2]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: s6/count_reg[0]/Q (HIGH)
+
+ There are 7 register/latch pins with no clock driven by root clock pin: s6/count_reg[1]/Q (HIGH)
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (821)
+--------------------------------------------------
+ There are 821 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (6)
+------------------------------
+ There are 6 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (16)
+--------------------------------
+ There are 16 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+        inf        0.000                      0                  837          inf        0.000                      0                  837           NA           NA                      NA                    NA  
+
+
+There are no user specified timing constraints.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay           837 Endpoints
+Min Delay           837 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 rst
+                            (input port)
+  Destination:            BTND/cd/count_reg[2]/CLR
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        11.567ns  (logic 1.456ns (12.589%)  route 10.111ns (87.411%))
+  Logic Levels:           1  (IBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    R2                                                0.000     0.000 f  rst (IN)
+                         net (fo=0)                   0.000     0.000    rst
+    R2                   IBUF (Prop_ibuf_I_O)         1.456     1.456 f  rst_IBUF_inst/O
+                         net (fo=357, routed)        10.111    11.567    BTND/cd/rst_IBUF
+    SLICE_X48Y14         FDCE                                         f  BTND/cd/count_reg[2]/CLR
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 rst
+                            (input port)
+  Destination:            BTND/cd/count_reg[4]/CLR
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        11.567ns  (logic 1.456ns (12.589%)  route 10.111ns (87.411%))
+  Logic Levels:           1  (IBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    R2                                                0.000     0.000 f  rst (IN)
+                         net (fo=0)                   0.000     0.000    rst
+    R2                   IBUF (Prop_ibuf_I_O)         1.456     1.456 f  rst_IBUF_inst/O
+                         net (fo=357, routed)        10.111    11.567    BTND/cd/rst_IBUF
+    SLICE_X48Y14         FDCE                                         f  BTND/cd/count_reg[4]/CLR
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 rst
+                            (input port)
+  Destination:            BTNU/cd/count_reg[15]/CLR
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        11.346ns  (logic 1.456ns (12.835%)  route 9.889ns (87.165%))
+  Logic Levels:           1  (IBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    R2                                                0.000     0.000 f  rst (IN)
+                         net (fo=0)                   0.000     0.000    rst
+    R2                   IBUF (Prop_ibuf_I_O)         1.456     1.456 f  rst_IBUF_inst/O
+                         net (fo=357, routed)         9.889    11.346    BTNU/cd/rst_IBUF
+    SLICE_X46Y15         FDCE                                         f  BTNU/cd/count_reg[15]/CLR
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 rst
+                            (input port)
+  Destination:            BTNU/cd/count_reg[16]/CLR
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        11.346ns  (logic 1.456ns (12.835%)  route 9.889ns (87.165%))
+  Logic Levels:           1  (IBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    R2                                                0.000     0.000 f  rst (IN)
+                         net (fo=0)                   0.000     0.000    rst
+    R2                   IBUF (Prop_ibuf_I_O)         1.456     1.456 f  rst_IBUF_inst/O
+                         net (fo=357, routed)         9.889    11.346    BTNU/cd/rst_IBUF
+    SLICE_X46Y15         FDCE                                         f  BTNU/cd/count_reg[16]/CLR
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 rst
+                            (input port)
+  Destination:            BTNU/cd/count_reg[12]/CLR
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        11.207ns  (logic 1.456ns (12.993%)  route 9.751ns (87.007%))
+  Logic Levels:           1  (IBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    R2                                                0.000     0.000 f  rst (IN)
+                         net (fo=0)                   0.000     0.000    rst
+    R2                   IBUF (Prop_ibuf_I_O)         1.456     1.456 f  rst_IBUF_inst/O
+                         net (fo=357, routed)         9.751    11.207    BTNU/cd/rst_IBUF
+    SLICE_X46Y14         FDCE                                         f  BTNU/cd/count_reg[12]/CLR
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 rst
+                            (input port)
+  Destination:            BTNU/cd/count_reg[0]/CLR
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        11.049ns  (logic 1.456ns (13.179%)  route 9.593ns (86.821%))
+  Logic Levels:           1  (IBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    R2                                                0.000     0.000 f  rst (IN)
+                         net (fo=0)                   0.000     0.000    rst
+    R2                   IBUF (Prop_ibuf_I_O)         1.456     1.456 f  rst_IBUF_inst/O
+                         net (fo=357, routed)         9.593    11.049    BTNU/cd/rst_IBUF
+    SLICE_X46Y13         FDCE                                         f  BTNU/cd/count_reg[0]/CLR
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 rst
+                            (input port)
+  Destination:            BTNU/cd/count_reg[5]/CLR
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        11.049ns  (logic 1.456ns (13.179%)  route 9.593ns (86.821%))
+  Logic Levels:           1  (IBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    R2                                                0.000     0.000 f  rst (IN)
+                         net (fo=0)                   0.000     0.000    rst
+    R2                   IBUF (Prop_ibuf_I_O)         1.456     1.456 f  rst_IBUF_inst/O
+                         net (fo=357, routed)         9.593    11.049    BTNU/cd/rst_IBUF
+    SLICE_X46Y13         FDCE                                         f  BTNU/cd/count_reg[5]/CLR
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 rst
+                            (input port)
+  Destination:            BTNU/cd/count_reg[1]/CLR
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        10.901ns  (logic 1.456ns (13.359%)  route 9.445ns (86.641%))
+  Logic Levels:           1  (IBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    R2                                                0.000     0.000 f  rst (IN)
+                         net (fo=0)                   0.000     0.000    rst
+    R2                   IBUF (Prop_ibuf_I_O)         1.456     1.456 f  rst_IBUF_inst/O
+                         net (fo=357, routed)         9.445    10.901    BTNU/cd/rst_IBUF
+    SLICE_X46Y12         FDCE                                         f  BTNU/cd/count_reg[1]/CLR
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 rst
+                            (input port)
+  Destination:            BTNU/cd/count_reg[2]/CLR
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        10.901ns  (logic 1.456ns (13.359%)  route 9.445ns (86.641%))
+  Logic Levels:           1  (IBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    R2                                                0.000     0.000 f  rst (IN)
+                         net (fo=0)                   0.000     0.000    rst
+    R2                   IBUF (Prop_ibuf_I_O)         1.456     1.456 f  rst_IBUF_inst/O
+                         net (fo=357, routed)         9.445    10.901    BTNU/cd/rst_IBUF
+    SLICE_X46Y12         FDCE                                         f  BTNU/cd/count_reg[2]/CLR
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 rst
+                            (input port)
+  Destination:            BTNU/cd/count_reg[3]/CLR
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        10.901ns  (logic 1.456ns (13.359%)  route 9.445ns (86.641%))
+  Logic Levels:           1  (IBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    R2                                                0.000     0.000 f  rst (IN)
+                         net (fo=0)                   0.000     0.000    rst
+    R2                   IBUF (Prop_ibuf_I_O)         1.456     1.456 f  rst_IBUF_inst/O
+                         net (fo=357, routed)         9.445    10.901    BTNU/cd/rst_IBUF
+    SLICE_X46Y12         FDCE                                         f  BTNU/cd/count_reg[3]/CLR
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 BTNCC/S/q1_reg/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            BTNCC/S/q2_reg/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.197ns  (logic 0.141ns (71.611%)  route 0.056ns (28.389%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y18         FDRE                         0.000     0.000 r  BTNCC/S/q1_reg/C
+    SLICE_X61Y18         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  BTNCC/S/q1_reg/Q
+                         net (fo=1, routed)           0.056     0.197    BTNCC/S/q1_reg_n_0
+    SLICE_X61Y18         FDRE                                         r  BTNCC/S/q2_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 BTND/S/q1_reg/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            BTND/S/q2_reg/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.197ns  (logic 0.141ns (71.611%)  route 0.056ns (28.389%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X55Y20         FDRE                         0.000     0.000 r  BTND/S/q1_reg/C
+    SLICE_X55Y20         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  BTND/S/q1_reg/Q
+                         net (fo=1, routed)           0.056     0.197    BTND/S/q1_reg_n_0
+    SLICE_X55Y20         FDRE                                         r  BTND/S/q2_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 BTNL/S/q1_reg/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            BTNL/S/q2_reg/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.220ns  (logic 0.164ns (74.580%)  route 0.056ns (25.420%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X54Y18         FDRE                         0.000     0.000 r  BTNL/S/q1_reg/C
+    SLICE_X54Y18         FDRE (Prop_fdre_C_Q)         0.164     0.164 r  BTNL/S/q1_reg/Q
+                         net (fo=1, routed)           0.056     0.220    BTNL/S/q1_reg_n_0
+    SLICE_X54Y18         FDRE                                         r  BTNL/S/q2_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 BTNR/S/q1_reg/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            BTNR/S/q2_reg/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.220ns  (logic 0.164ns (74.580%)  route 0.056ns (25.420%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X54Y13         FDRE                         0.000     0.000 r  BTNR/S/q1_reg/C
+    SLICE_X54Y13         FDRE (Prop_fdre_C_Q)         0.164     0.164 r  BTNR/S/q1_reg/Q
+                         net (fo=1, routed)           0.056     0.220    BTNR/S/q1_reg_n_0
+    SLICE_X54Y13         FDRE                                         r  BTNR/S/q2_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 alarm/s2/count_reg[1]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            alarm/s2/count_reg[3]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.287ns  (logic 0.189ns (65.853%)  route 0.098ns (34.147%))
+  Logic Levels:           2  (FDCE=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y22         FDCE                         0.000     0.000 r  alarm/s2/count_reg[1]/C
+    SLICE_X61Y22         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  alarm/s2/count_reg[1]/Q
+                         net (fo=5, routed)           0.098     0.239    alarm/s2/count_reg[1]_0[1]
+    SLICE_X60Y22         LUT5 (Prop_lut5_I2_O)        0.048     0.287 r  alarm/s2/count[3]_i_1__1/O
+                         net (fo=1, routed)           0.000     0.287    alarm/s2/count[3]_i_1__1_n_0
+    SLICE_X60Y22         FDCE                                         r  alarm/s2/count_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 BTNU/deb/q2_reg/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            BTNU/S/q1_reg/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.294ns  (logic 0.186ns (63.250%)  route 0.108ns (36.750%))
+  Logic Levels:           2  (FDCE=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y18         FDCE                         0.000     0.000 r  BTNU/deb/q2_reg/C
+    SLICE_X45Y18         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  BTNU/deb/q2_reg/Q
+                         net (fo=2, routed)           0.108     0.249    BTNU/deb/q2
+    SLICE_X47Y18         LUT3 (Prop_lut3_I1_O)        0.045     0.294 r  BTNU/deb/q1_i_1/O
+                         net (fo=1, routed)           0.000     0.294    BTNU/S/s1
+    SLICE_X47Y18         FDRE                                         r  BTNU/S/q1_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 BTND/deb/q1_reg/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            BTND/deb/q2_reg/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.306ns  (logic 0.164ns (53.527%)  route 0.142ns (46.473%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X52Y19         FDCE                         0.000     0.000 r  BTND/deb/q1_reg/C
+    SLICE_X52Y19         FDCE (Prop_fdce_C_Q)         0.164     0.164 r  BTND/deb/q1_reg/Q
+                         net (fo=2, routed)           0.142     0.306    BTND/deb/q1
+    SLICE_X55Y19         FDCE                                         r  BTND/deb/q2_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 dc/s3/count_reg[0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            dc/s3/count_reg[1]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.307ns  (logic 0.186ns (60.498%)  route 0.121ns (39.502%))
+  Logic Levels:           2  (FDCE=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y25         FDCE                         0.000     0.000 r  dc/s3/count_reg[0]/C
+    SLICE_X61Y25         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  dc/s3/count_reg[0]/Q
+                         net (fo=7, routed)           0.121     0.262    dc/s3/outmin1[0]
+    SLICE_X60Y25         LUT6 (Prop_lut6_I3_O)        0.045     0.307 r  dc/s3/count[1]_i_1/O
+                         net (fo=1, routed)           0.000     0.307    dc/s3/count[1]_i_1_n_0
+    SLICE_X60Y25         FDCE                                         r  dc/s3/count_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 FSM_onehot_statelr_reg[2]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            FSM_onehot_nextstatelr_reg[0]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.311ns  (logic 0.186ns (59.863%)  route 0.125ns (40.137%))
+  Logic Levels:           2  (FDCE=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y20         FDCE                         0.000     0.000 r  FSM_onehot_statelr_reg[2]/C
+    SLICE_X61Y20         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  FSM_onehot_statelr_reg[2]/Q
+                         net (fo=9, routed)           0.125     0.266    BTNL/sq/FSM_onehot_statelr_reg[3][2]
+    SLICE_X60Y20         LUT5 (Prop_lut5_I1_O)        0.045     0.311 r  BTNL/sq/FSM_onehot_nextstatelr_reg[0]_i_1/O
+                         net (fo=1, routed)           0.000     0.311    BTNL_n_3
+    SLICE_X60Y20         LDCE                                         r  FSM_onehot_nextstatelr_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 BTNCC/deb/q1_reg/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            BTNCC/deb/q2_reg/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.311ns  (logic 0.141ns (45.303%)  route 0.170ns (54.697%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X59Y18         FDCE                         0.000     0.000 r  BTNCC/deb/q1_reg/C
+    SLICE_X59Y18         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  BTNCC/deb/q1_reg/Q
+                         net (fo=2, routed)           0.170     0.311    BTNCC/deb/q1
+    SLICE_X59Y18         FDCE                                         r  BTNCC/deb/q2_reg/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
