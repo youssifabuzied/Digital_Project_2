@@ -29,8 +29,8 @@ reg prerst;
 wire clkout;
 wire en1, en2;
 
-assign en1 = (enmin&&(min0==9&&~UpDown||min0==0&&UpDown)) ? 1:0;
-assign en2 = ((enhours&&(hours0==9&&~UpDown||hours0==0&&UpDown)))? 1:0;
+assign en1 = (enmin&&(min0==9&&~UpDown||min0==0&&UpDown)) ? 1:0;  //enable of min1
+assign en2 = ((enhours&&(hours0==9&&~UpDown||hours0==0&&UpDown)))? 1:0;  //enable of hours1
 // clock divider for the alarm time displayed
 clockDivider ck(clk, rst, clkout);
 
@@ -42,9 +42,9 @@ bin_counter_nbits #(3,  6)s3(clkout,0, rst,en1, UpDown, min1 );
 bin_counter_nbits #(4,  10,4)s4(clkout,prerst, rstman||rst,(enhours), UpDown, hours0 );
 bin_counter_nbits #(3,  6,3)s5(clkout,prerst, rstman||rst,(en2), UpDown, hours1 );
 always @ * begin 
-if(hours0== 4 && hours1 == 2&&~UpDown) rstman = 1;
+if(hours0== 4 && hours1 == 2&&~UpDown) rstman = 1;  //This when we are adding hours in the adjust mode and it reaches 24, we reset to 0
 else rstman = 0;
-if(hours0== 9 && hours1 == 5) prerst = 1;
+if(hours0== 9 && hours1 == 5) prerst = 1;  //When hours = 00 and we minus 1, we make hours = 23(values of z-1)
 else prerst = 0;
 end
  
