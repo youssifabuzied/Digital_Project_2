@@ -20,19 +20,27 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Alarm( clk, rst, enmin, enhours,  UpDown,
- min0, min1, hours0, hours1  );
+module Alarm( clk, rst, enmin, enhours,  UpDown,min0, min1, hours0, hours1  );
 input clk, rst, enmin, enhours,UpDown;
-
- output[3:0]hours0, min0;
- output[2:0]hours1, min1;
-wire clkout;reg rstman;
+output[3:0]hours0, min0;
+output[2:0]hours1, min1;
+reg rstman;
 reg prerst;
+wire clkout;
+wire en1, en2;
+
+assign en1 = (enmin&&(min0==9&&~UpDown||min0==0&&UpDown)) ? 1:0;
+assign en2 = ((enhours&&(hours0==9&&~UpDown||hours0==0&&UpDown)))? 1:0;
+// clock divider for the alarm time displayed
 clockDivider ck(clk, rst, clkout);
+
+// The idea of how the alarm minutes's units enables the alarm minutes's tens and this is applied for the hours also
+// But, the minutes is not enabling the hours because here we enter the alarm mode when we are at the adjusting mode so we want to adjust the hours  
+// seperated form the minutes   
 bin_counter_nbits #(4,  10)s2(clkout,0, rst,enmin, UpDown, min0 );
-bin_counter_nbits #(3,  6)s3(clkout,0, rst,enmin&&(min0==9&&~UpDown||min0==0&&UpDown), UpDown, min1 );
+bin_counter_nbits #(3,  6)s3(clkout,0, rst,en1, UpDown, min1 );
 bin_counter_nbits #(4,  10,4)s4(clkout,prerst, rstman||rst,(enhours), UpDown, hours0 );
-bin_counter_nbits #(3,  6,3)s5(clkout,prerst, rstman||rst,((enhours&&(hours0==9&&~UpDown||hours0==0&&UpDown))), UpDown, hours1 );
+bin_counter_nbits #(3,  6,3)s5(clkout,prerst, rstman||rst,(en2), UpDown, hours1 );
 always @ * begin 
 if(hours0== 4 && hours1 == 2&&~UpDown) rstman = 1;
 else rstman = 0;
